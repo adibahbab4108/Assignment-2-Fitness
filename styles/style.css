@@ -9,6 +9,7 @@
 body {
     font-family: Inter, sans-serif;
     background-color: #000;
+    color: #FFF;
 }
 
 p {
@@ -17,7 +18,6 @@ p {
 
 .btn-primary {
     background-color: #E6533C;
-    color: #FFFFFF;
     padding: 1rem 2rem;
     border-radius: 2.5rem;
     border: none;
@@ -36,13 +36,15 @@ p {
     font-weight: 700;
 }
 
-.parent-container {
-    background-color: #000;
+.container {
+    width: 85%;
+    margin: 50px auto;
+    border: 2px solid greenyellow;
 }
 
-.child-container {
-    width: 90%;
-    margin: 0 auto;
+.section-title {
+    font-size: 3rem;
+    margin-bottom: 28px;
 }
 
 /* Nav design */
@@ -54,7 +56,7 @@ p {
 .logo {
     color: #E6533C;
     font-family: Inter;
-    font-size: 2.25rem;
+    font-size: 3rem;
     display: inline-block;
     font-weight: 900;
 }
@@ -62,8 +64,7 @@ p {
 .navbar {
     display: flex;
     justify-content: space-between;
-    padding: 3.5rem 0;
-    /* border: 1px solid red; */
+    margin-bottom: 28px;
 }
 
 .nav-links {
@@ -72,18 +73,23 @@ p {
     border: 1px solid rgba(255, 255, 255, 0.29);
     align-items: center;
     border-radius: 3rem;
-    padding: 0 1rem;
+    padding: 0 1.2rem;
+}
 
+.nav-links li {
+    list-style: none;
 }
 
 .nav-links li a {
     text-decoration: none;
     color: #FFFFFF;
+    font-size: 1.5rem;
 }
 
 /* Cover left Part */
 .cover-content {
     display: flex;
+    justify-content: space-between;
 }
 
 .cover-text {
@@ -94,7 +100,7 @@ p {
 
 .cover-title {
     color: #FFFFFF;
-    font-size: 5rem;
+    font-size: 6rem;
 }
 
 .curve-title {
@@ -110,10 +116,13 @@ p {
 /* Cover right Part */
 .image {
     position: relative;
-    width: 50%;
+    /* border: 1px solid yellow; */
+    width: 40%;
+
 }
-.image img{
-    width: 100%;
+
+.image img {
+    /* width: 100%; */
 }
 
 .vid {
@@ -145,5 +154,41 @@ p {
 
 .vid-2 {
     top: 25%;
-    right: 1%;
+    right: 10%;
+}
+
+/* Change your Habits Style */
+.habit-container-text {
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.habits-cards {
+    margin-top: 3rem;
+    display: flex;
+    gap: 3rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid yellow;  */
+}
+
+.card-img {
+    width: 170px;
+    border-radius: 50%;
+    /* border: 2px solid tan; */
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.card-img img {
+    width: 100%;
+}
+.card .text {
+    text-align: center;
 }
