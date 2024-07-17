@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Shared Style */
+body {
+    font-family: Inter, sans-serif;
+    background-color: #000;
+}
+
+p {
+    color: #ffffff7c
+}
+
+.btn-primary {
+    background-color: #E6533C;
+    color: #FFFFFF;
+    padding: 1rem 2rem;
+    border-radius: 2.5rem;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #FFFFFF;
+    padding: 1rem 2rem;
+    border-radius: 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.29);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.parent-container {
+    background-color: #000;
+}
+
+.child-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Nav design */
+.cover-bg {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(36, 35, 35, 1) 60%, rgba(0, 0, 0, 1) 100%);
+
+}
+
+.logo {
+    color: #E6533C;
+    font-family: Inter;
+    font-size: 2.25rem;
+    display: inline-block;
+    font-weight: 900;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 3.5rem 0;
+    /* border: 1px solid red; */
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.29);
+    align-items: center;
+    border-radius: 3rem;
+    padding: 0 1rem;
+
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+/* Cover left Part */
+.cover-content {
+    display: flex;
+}
+
+.cover-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.cover-title {
+    color: #FFFFFF;
+    font-size: 5rem;
+}
+
+.curve-title {
+    font-family: Dancing Script;
+    font-size: 7rem;
+}
+
+.btns {
+    display: flex;
+    gap: 2rem;
+}
+
+/* Cover right Part */
+.image {
+    position: relative;
+    width: 50%;
+}
+.image img{
+    width: 100%;
+}
+
+.vid {
+    /* border: 1px solid red; */
+    filter: blur(50%);
+    position: absolute;
+    background-color: #3030307e;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.vid .circle {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: #E6533C;
+}
+
+.vid h3 {
+    color: #FFFFFF;
+}
+
+.vid-1 {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    bottom: 50px;
+}
+
+.vid-2 {
+    top: 25%;
+    right: 1%;
+}
