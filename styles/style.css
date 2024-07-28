@@ -13,7 +13,7 @@ body {
 }
 
 p {
-    color: #ffffff7c;
+    color: rgba(255, 255, 255, 0.5);
     margin: 30px 0;
     text-align: justify;
 }
@@ -49,7 +49,9 @@ p {
     font-size: 3rem;
     margin-bottom: 28px;
 }
-
+.bg-gray{
+    background-color: #191919;
+}
 /* Nav design */
 .cover-bg {
     background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(36, 35, 35, 1) 60%, rgba(0, 0, 0, 1) 100%);
@@ -61,6 +63,7 @@ p {
     font-size: 3rem;
     display: inline-block;
     font-weight: 900;
+    font-style: italic;
 }
 
 .navbar {
@@ -82,11 +85,13 @@ p {
 .nav-links li {
     list-style: none;
 }
-.navbar .fa{
-     font-size: 40px; 
-     display: none; 
+
+.navbar .fa {
+    font-size: 40px;
+    display: none;
     cursor: pointer;
 }
+
 .nav-links li a {
     text-decoration: none;
     color: #FFFFFF;
@@ -108,7 +113,7 @@ p {
 .cover-title {
     color: #FFFFFF;
     font-size: 6rem;
-    margin-bottom: 20px ;
+    margin-bottom: 20px;
 }
 
 .curve-title {
@@ -122,10 +127,13 @@ p {
 }
 
 /* Cover right Part */
-.image {
+.cover-content .image {
     position: relative;
     width: 40%;
+    display: grid;
+    place-items: center;
 }
+
 .vid {
     filter: blur(50%);
     position: absolute;
@@ -196,17 +204,16 @@ p {
 .run-extra-mile {
     display: flex;
     justify-content: space-between;
-    background-color: #222222;
     padding: 2.5rem;
-    border-radius: 1rem;
-
+    border-radius: 15px;
+    align-items: center;
 }
 
 .run-extra-mile-text {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 45%;
+    width: 50%;
 }
 
 .run-extra-mile img {
@@ -214,13 +221,14 @@ p {
     height: 350px;
     object-fit: cover;
     border-radius: 1rem;
+    box-shadow: 5px 5px 10px rgba(230, 83, 60, 0.5);;
+    width: 40%;
 }
 
 /* Training and Execise Style */
 .training-exercise-text {
     width: 60%;
     margin-bottom: 45px;
-
 }
 
 .training-gallery .row-1 {
@@ -283,7 +291,6 @@ p {
 
 /* BMI Calculator Style */
 .content-container {
-    background-color: #222222;
     padding: 50px 0;
 }
 
@@ -322,11 +329,11 @@ p {
 
 .calculate-your-bmi-input {
     margin: 25px 0;
-
 }
 
 .calculate-your-bmi-input .row-1,
 .row-2 {
+
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -338,12 +345,13 @@ p {
 
 .calculate-your-bmi-input input,
 select {
+    /* width: 100%; */
     padding: 10px;
     background-color: #3b3b3b;
     margin: 5px;
     border-radius: 0.5rem;
     border: 0;
-
+    color: rgb(117, 117, 117);
 }
 
 /* Meet Our Team */
@@ -357,7 +365,6 @@ select {
 .meet-our-team-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    background-color: #222222;
     gap: 16px;
     padding: 16px;
     border-radius: 1rem;
@@ -382,9 +389,6 @@ select {
 }
 
 /* Footer Section Design */
-.footer-section-container {
-    background-color: #191919;
-}
 
 .footer-content {
     display: flex;
@@ -393,13 +397,15 @@ select {
     border-bottom: 1px solid #ffffff42;
     width: 85%;
     margin: 0 auto;
+    gap: 1.5rem;
 }
 
 .footer-text {
     width: 50%;
 }
 
-.footer-text>.logo, .get-started>h2 {
+.footer-text>.logo,
+.get-started>h2 {
     margin-bottom: 16px;
 }
 
@@ -408,28 +414,27 @@ select {
     flex-direction: column;
     gap: 1.5rem;
 }
-.get-started h4{
+
+.get-started h4 {
     cursor: pointer;
     color: rgba(255, 255, 255, 0.5);
     font-weight: 300;
 
 }
+
 .footer-copyright {
     text-align: center;
     padding: 2rem 0;
 }
 
 
-/* Responsive................. */
+/* Responsive for small device................. */
 @media screen and (max-width:576px) {
-    .cover-content .image{
-        width: 100%;
-        display: grid;
-        place-items: center;
-    }
-    .cover-title{
+
+    .cover-title {
         font-size: 4rem;
     }
+
     .cover-content,
     .habits-cards,
     .bmi-calculator-content,
@@ -438,12 +443,15 @@ select {
     }
 
     .nav-links {
-      display: none;
+        display: none;
     }
-    .navbar .fa{
+
+    .navbar .fa {
         display: block;
     }
-    .btn-primary,.btn-secondary {
+
+    .btn-primary,
+    .btn-secondary {
         margin: 20px 0;
     }
 
@@ -451,26 +459,71 @@ select {
         justify-content: center;
         align-items: center;
     }
-
-    .run-extra-mile-text {
-        width: 85%;
+    .cover-content .image,
+    .run-extra-mile-text,
+    .run-extra-mile img,
+    .training-exercise-text,
+    .bmi-calculator-text,
+    .meet-our-team-text {
+        width: 100%;
     }
 
-    .training-exercise-text,.bmi-calculator-text,.meet-our-team-text {
-        width: 90%;
-        margin-bottom: 45px;
+    .meet-our-team-gallery
+    {
+        grid-template-columns: 1fr 1fr ;
     }
-    .meet-our-team-gallery{
-        grid-template-columns: 1fr;
-    }
-    .footer-content{
+
+    .footer-content {
         flex-direction: column;
     }
+
     .footer-text {
         width: 90%;
         margin-bottom: 10px;
     }
-    .get-started{
+
+    .get-started {
         margin: 20px 0;
+        gap: 1rem;
+    }
+}
+
+/* Responsive for Medium device................. */
+@media screen and (min-width:576px) and (max-width:992px) {
+    .nav-links{
+        gap: 1.5rem;
+    }
+    .nav-links li a{
+        font-size: 1rem;
+        
+    }
+    .habits-cards
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+    }
+
+    .cover-content .image,
+    .run-extra-mile-text,
+    .run-extra-mile img,
+    .training-exercise-text,
+    .bmi-calculator-text,
+    .meet-our-team-text{
+        /* border: 2px solid greenyellow; */
+        width: 100%;
+    }
+   
+    .cover-content,
+    .habits-cards,
+    .bmi-calculator-content,
+    .run-extra-mile {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .cover-content .cover-title{
+        font-size: 3rem;
+    }
+    .get-started{
+        gap: 1rem;
     }
 }
